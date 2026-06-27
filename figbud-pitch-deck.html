@@ -377,7 +377,7 @@ footer{background:var(--gd);padding:24px 0;}
       <div class="dlv-num">01</div>
       <div>
         <div class="dlv-title">NOC Infrastructure Operational</div>
-        <div class="dlv-desc">MikroTik network operations centre live. WireGuard tunnels configured. M-Pesa autopay billing operational end-to-end. Remote management for all client connections active before first installation.</div>
+        <div class="dlv-desc">MikroTik RouterOS NOC live on dedicated server. Zabbix monitoring for all client CPEs. WireGuard site-to-site tunnels configured. Safaricom Daraja API integrated for M-Pesa autopay. Remote bandwidth throttle and suspension operational. No client installation proceeds until NOC is fully tested.</div>
       </div>
       <div class="dlv-right"><span class="dlv-cat cat-isp">ISP</span><div class="dlv-status">Planned · July 31</div></div>
     </div>
@@ -544,11 +544,11 @@ footer{background:var(--gd);padding:24px 0;}
         <div class="bl-idx">02</div>
         <div>
           <div class="bl-name"><span class="dot-a"></span>Public Hotspot Network</div>
-          <div class="bl-desc">M-Pesa voucher WiFi nodes at open markets, bus stages and shopping centres. Anyone nearby pays KES 10–50 via M-Pesa and gets instant WiFi — no SIM data plan needed. Revenue is daily and immediate. Target: 8 nodes Month 1, scaling to 30 nodes by Month 3.</div>
+          <div class="bl-desc">MikroTik CHR hotspot nodes at open markets, bus stages, and shopping centres. Customers pay KES 10–50 via M-Pesa STK push and get instant WiFi — no app, no SIM data plan. Revenue collected daily via Safaricom Daraja API. 8 nodes Month 1 scaling to 30 by Month 3.</div>
         </div>
         <div class="bl-right">
           <div class="bl-mrr">KES 450K/mo</div>
-          <div class="bl-mrrsub">25 sessions/day × KES 20 × 30 nodes</div>
+          <div class="bl-mrrsub">30 nodes × 25 sessions × KES 20 avg × 30 days</div>
           <div class="bl-badgew"><span class="bgl">Live Month 1</span></div>
         </div>
       </div>
@@ -627,7 +627,7 @@ footer{background:var(--gd);padding:24px 0;}
     <h2 class="sh">ISP Residential —<br>Starlink Managed Internet</h2>
     <div class="isp-grid">
       <div>
-        <p style="font-size:16px;color:var(--mt);line-height:1.8;margin-bottom:28px;">We install Starlink, configure MikroTik routing, set up WireGuard remote access, and connect billing to M-Pesa autopay. The client pays monthly and never manages their own equipment.</p>
+        <p style="font-size:16px;color:var(--mt);line-height:1.8;margin-bottom:28px;">We install Starlink, configure MikroTik routing, set up WireGuard tunnels for remote NOC access, and connect billing to M-Pesa autopay via Safaricom Daraja API. The client pays monthly via M-Pesa and never touches the router — all management is handled remotely from our NOC.</p>
 
         <div class="pkg-pair">
           <div class="pkgc">
@@ -653,9 +653,9 @@ footer{background:var(--gd);padding:24px 0;}
             </div>
             <div class="pbody">
               <div class="pf">Starlink Business dish (priority bandwidth)</div>
-              <div class="pf">Up to 300Mbps download</div>
+              <div class="pf">Up to 300Mbps download (priority beam)</div>
               <div class="pf">MikroTik + VLAN + hotspot vouchers</div>
-              <div class="pf">Dedicated account manager</div>
+              <div class="pf">Priority support · 4-hour response SLA</div>
             </div>
           </div>
         </div>
@@ -801,35 +801,35 @@ footer{background:var(--gd);padding:24px 0;}
 
         <div class="bstep">
           <div class="bsn">01</div>
-          <div><div class="bst">Camera Procurement &amp; Testing</div><div class="bsd">Source AI cameras, test with cloud platforms. Define spec per client type — 4 to 16 cameras per site depending on property size.</div></div>
+          <div><div class="bst">Camera Hardware Procurement</div><div class="bsd">Dahua IPC-HFW2849S 4MP IR cameras sourced and bench-tested. Site spec locked: 4 cameras (SME/school), 8–16 (bank/estate). Each camera runs AI motion and intrusion detection at the edge — no cloud dependency for alerts.</div></div>
         </div>
         <div class="bstep">
           <div class="bsn">02</div>
-          <div><div class="bst">AI Platform Integration</div><div class="bsd">Connect cameras to cloud AI — motion, intrusion, object detection. Build WhatsApp + SMS alert pipeline. Tune to reduce false alerts.</div></div>
+          <div><div class="bst">AI Platform &amp; Alert Pipeline</div><div class="bsd">Dahua DSS Pro NVR with AI Smart Detection module configured — perimeter intrusion, loitering, face detection. Alerts delivered via Africa's Talking SMS API and WhatsApp Business API. False-alert suppression tuned before client go-live.</div></div>
         </div>
         <div class="bstep">
           <div class="bsn">03</div>
-          <div><div class="bst">Client Dashboard &amp; NOC Integration</div><div class="bsd">Clients view live feeds on mobile app. NOC monitors all sites remotely from the same platform as ISP.</div></div>
+          <div><div class="bst">Client Portal &amp; NOC Integration</div><div class="bsd">Clients access live feeds and alert history via Dahua DMSS mobile app (iOS + Android). All CCTV sites added to the same Zabbix NOC monitoring instance used for ISP — one pane of glass for all infrastructure.</div></div>
         </div>
         <div class="bstep">
           <div class="bsn">04</div>
-          <div><div class="bst">M-Pesa Subscription Billing Live</div><div class="bsd">Monthly CCTV subscription on autopay. Auto-suspend on non-payment. Same billing infrastructure as ISP.</div></div>
+          <div><div class="bst">M-Pesa Subscription Billing Live</div><div class="bsd">Monthly CCTV subscription collected via Safaricom Daraja API — same autopay system as ISP. Non-payment triggers automatic camera suspension at 72 hours. Reactivation instant on payment.</div></div>
         </div>
       </div>
 
       <div>
-        <div class="cctv-hd">Target Clients · Month 3: 20 Sites</div>
-        <div class="crow"><div><div class="crn">SMEs &amp; Retail</div><div class="crd">Supermarkets, pharmacies, hardware</div></div><div class="crs">10</div></div>
-        <div class="crow"><div><div class="crn">Schools</div><div class="crd">Primary, secondary, TVET campuses</div></div><div class="crs">4</div></div>
-        <div class="crow"><div><div class="crn">Banks &amp; Financial</div><div class="crd">Branch CCTV + compliance monitoring</div></div><div class="crs">3</div></div>
-        <div class="crow"><div><div class="crn">Security &amp; Properties</div><div class="crd">Gated estates, apartment complexes</div></div><div class="crs">3</div></div>
+        <div class="cctv-hd">Client Mix · Month 3: 20 Sites</div>
+        <div class="crow"><div><div class="crn">SMEs &amp; Retail</div><div class="crd">Supermarkets, pharmacies, hardware stores — 4 cameras, KES 5,000/mo</div></div><div class="crs">10</div></div>
+        <div class="crow"><div><div class="crn">Schools</div><div class="crd">Primary, secondary, TVET — 8 cameras covering gates, grounds, classrooms, KES 8,500/mo</div></div><div class="crs">4</div></div>
+        <div class="crow"><div><div class="crn">Banks &amp; SACCOs</div><div class="crd">Branch + ATM coverage, AI alert for after-hours movement, KES 12,000/mo</div></div><div class="crs">3</div></div>
+        <div class="crow"><div><div class="crn">Gated Estates</div><div class="crd">Gate cameras + perimeter — AI alert sent to estate manager via WhatsApp, KES 10,000/mo</div></div><div class="crs">3</div></div>
         <div class="cctv-tot">
           <div class="ctotn">KES 170K/mo</div>
-          <div class="ctotl">20 sites × avg KES 8,500/mo · Month 3</div>
+          <div class="ctotl">Blended avg KES 8,500/site · 20 sites · Month 3</div>
         </div>
         <div style="margin-top:16px;padding:18px;background:rgba(255,255,255,0.05);border-radius:8px;">
-          <div style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.3);margin-bottom:6px;letter-spacing:0.5px;">Cross-sell advantage</div>
-          <div style="font-size:13px;color:rgba(255,255,255,0.45);line-height:1.65;">A client with both Starlink ISP and CCTV from Figbloom has zero incentive to churn. Cancelling one service means losing both. ARPU doubles. Retention locks in.</div>
+          <div style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.3);margin-bottom:6px;letter-spacing:0.5px;">Connectivity advantage</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.45);line-height:1.65;">CCTV runs on Starlink. A client taking both ISP and CCTV from Figbloom is fully locked in — one monthly M-Pesa payment, one NOC, one point of contact. ARPU for a dual client: KES 24,500/mo minimum.</div>
         </div>
       </div>
     </div>
@@ -863,7 +863,7 @@ footer{background:var(--gd);padding:24px 0;}
         <div class="tlkpis">
           <div><div class="kpin">20</div><div class="kpil">ISP installs</div></div>
           <div><div class="kpin">8</div><div class="kpil">HS nodes</div></div>
-          <div><div class="kpin">~250K</div><div class="kpil">MRR</div></div>
+          <div><div class="kpin">~296K</div><div class="kpil">MRR</div></div>
         </div>
       </div>
 
@@ -888,7 +888,7 @@ footer{background:var(--gd);padding:24px 0;}
         <div class="tlkpis">
           <div><div class="kpin">55</div><div class="kpil">ISP installs</div></div>
           <div><div class="kpin">20</div><div class="kpil">HS nodes</div></div>
-          <div><div class="kpin">~800K</div><div class="kpil">MRR</div></div>
+          <div><div class="kpin">~976K</div><div class="kpil">MRR</div></div>
         </div>
       </div>
 
@@ -941,15 +941,15 @@ footer{background:var(--gd);padding:24px 0;}
           <line x1="60" y1="188" x2="520" y2="188" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
           <line x1="60" y1="132" x2="520" y2="132" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
           <line x1="60" y1="76" x2="520" y2="76" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-          <!-- Month 1 (x=93) · ISP 216K=30px · Hotspot 120K=17px · total 336K=47px -->
-          <rect x="93" y="214" width="110" height="30" fill="#2D5523"/>
-          <rect x="93" y="197" width="110" height="17" fill="#3F6B30"/>
+          <!-- Month 1 · ISP 176K=25px · Hotspot 120K=17px · total 296K=42px -->
+          <rect x="93" y="219" width="110" height="25" fill="#2D5523"/>
+          <rect x="93" y="202" width="110" height="17" fill="#3F6B30"/>
           <text x="148" y="262" text-anchor="middle" font-size="11" font-weight="600" fill="rgba(255,255,255,0.55)" font-family="Outfit,sans-serif">Month 1</text>
           <text x="148" y="274" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.22)" font-family="Outfit,sans-serif">July 2026</text>
-          <!-- Month 2 (x=236) · ISP 595K=83px · Hotspot 300K=42px · CCTV 85K=12px · total 980K=137px -->
-          <rect x="236" y="161" width="110" height="83" fill="#2D5523"/>
-          <rect x="236" y="119" width="110" height="42" fill="#3F6B30"/>
-          <rect x="236" y="107" width="110" height="12" fill="#A07010"/>
+          <!-- Month 2 · ISP 633K=89px · Hotspot 300K=42px · CCTV 43K=6px · total 976K=137px -->
+          <rect x="236" y="155" width="110" height="89" fill="#2D5523"/>
+          <rect x="236" y="113" width="110" height="42" fill="#3F6B30"/>
+          <rect x="236" y="107" width="110" height="6" fill="#A07010"/>
           <text x="291" y="262" text-anchor="middle" font-size="11" font-weight="600" fill="rgba(255,255,255,0.55)" font-family="Outfit,sans-serif">Month 2</text>
           <text x="291" y="274" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.22)" font-family="Outfit,sans-serif">August 2026</text>
           <!-- Month 3 (x=379) · ISP 865K=121px · Hotspot 450K=63px · CCTV 170K=24px · total 1485K=208px -->
@@ -1028,8 +1028,8 @@ footer{background:var(--gd);padding:24px 0;}
       </div>
 
       <div>
-        <div style="font-size:32px;font-weight:600;color:var(--t);line-height:1.1;margin-bottom:24px;">Ready to discuss further.</div>
-        <p style="font-size:16px;color:var(--mt);line-height:1.75;margin-bottom:36px;">This plan is specific, time-bound and deliverable. ISP and Hotspot infrastructure is ready to deploy. CCTV build begins immediately. Let's talk.</p>
+        <div style="font-size:32px;font-weight:600;color:var(--t);line-height:1.1;margin-bottom:24px;">Get in touch.</div>
+        <p style="font-size:16px;color:var(--mt);line-height:1.75;margin-bottom:36px;">ISP and Hotspot infrastructure is ready to deploy in July 2026. CCTV procurement begins Week 1. NOC setup is the first deliverable — nothing is installed until the operations centre is live and tested end-to-end.</p>
         <div class="contact-lbl">Email</div>
         <div class="contact-val">ian.duncan@figbloom.org</div>
         <div class="contact-lbl">Website</div>
