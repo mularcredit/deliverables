@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Figbloom — 90-Day Deliverables Plan 2026</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --g:#2D5523;--gd:#1C3B15;--gl:#F3F6F1;
+  --b:#D2DAD0;--t:#0F1A0C;--mt:#566651;--w:1100px;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Outfit',sans-serif;color:var(--t);background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:56px;display:flex;align-items:center;background:rgba(255,255,255,0.96);backdrop-filter:blur(16px);box-shadow:0 1px 0 rgba(0,0,0,0.06);transition:all 0.25s;}
+nav.dk{background:rgba(28,59,21,0.96);box-shadow:0 1px 0 rgba(0,0,0,0.2);}
+.ni{max-width:var(--w);margin:0 auto;padding:0 48px;width:100%;display:flex;align-items:center;justify-content:space-between;}
+.nl{display:flex;gap:28px;list-style:none;}
+.nl a{font-size:12px;font-weight:500;color:var(--mt);text-decoration:none;transition:color 0.15s;}
+.nl a:hover{color:var(--t);}
+nav.dk .nl a{color:rgba(255,255,255,0.4);}
+nav.dk .nl a:hover{color:#fff;}
+.logo{height:26px;object-fit:contain;object-position:left;transition:filter 0.25s;}
+nav.dk .logo{filter:brightness(0) invert(1) opacity(0.8);}
+.nbtn{padding:7px 18px;background:var(--g);color:#fff;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;letter-spacing:0.2px;transition:opacity 0.15s;}
+.nbtn:hover{opacity:0.8;}
+
+/* WRAP */
+.w{max-width:var(--w);margin:0 auto;padding:0 48px;}
+
+/* ══ HERO ══════════════════════════════════════════════════════════ */
+#hero{background:var(--g);min-height:100vh;padding-top:56px;display:flex;flex-direction:column;}
+.hm{flex:1;display:flex;flex-direction:column;justify-content:flex-end;max-width:var(--w);margin:0 auto;padding:48px 48px 40px;width:100%;}
+.htag{font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:36px;display:flex;align-items:center;gap:10px;}
+.htag::before{content:'';width:20px;height:1px;background:rgba(255,255,255,0.2);display:block;}
+.hh{font-size:clamp(44px,5.5vw,80px);font-weight:600;color:#fff;line-height:1.04;letter-spacing:-1.5px;max-width:640px;margin-bottom:22px;}
+.hsub{font-size:16px;color:rgba(255,255,255,0.45);line-height:1.75;max-width:520px;margin-bottom:60px;}
+
+/* Service panels */
+.hsvcs{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.08);}
+.hsvc{padding:28px 28px;background:var(--g);}
+.hsvc-lbl{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.hdot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.hsvc-name{font-size:16px;font-weight:600;color:#fff;margin-bottom:14px;line-height:1.3;}
+.hsvc-n{font-size:26px;font-weight:600;color:#fff;line-height:1;margin-bottom:3px;white-space:nowrap;}
+.hsvc-meta{font-size:12px;color:rgba(255,255,255,0.35);margin-bottom:14px;}
+.bgl{display:inline-flex;align-items:center;border-radius:4px;padding:3px 10px;font-size:10px;font-weight:600;letter-spacing:0.3px;white-space:nowrap;background:rgba(100,200,130,0.14);color:#7EC8A0;}
+.bgb{display:inline-flex;align-items:center;border-radius:4px;padding:3px 10px;font-size:10px;font-weight:600;letter-spacing:0.3px;white-space:nowrap;background:rgba(250,195,60,0.14);color:#F0C040;}
+.hfoot{padding:16px 48px;margin-top:1px;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.18);max-width:var(--w);margin:0 auto;width:100%;}
+
+/* ══ SECTIONS ══════════════════════════════════════════════════════ */
+.sec{padding:88px 0;}
+.sec-alt{background:var(--gl);}
+.sec-dark{background:var(--g);}
+.slbl{font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--g);margin-bottom:12px;}
+.slbl-w{color:rgba(255,255,255,0.3);}
+.sh{font-size:clamp(28px,3vw,44px);font-weight:600;line-height:1.1;letter-spacing:-0.5px;color:var(--t);margin-bottom:12px;}
+.sh-w{color:#fff;}
+.slead{font-size:16px;color:var(--mt);line-height:1.75;max-width:580px;margin-bottom:48px;}
+.slead-w{color:rgba(255,255,255,0.45);}
+
+/* ══ BUSINESS LINES TABLE ══════════════════════════════════════════ */
+.bl-row{display:grid;grid-template-columns:36px 1fr auto;gap:0 24px;align-items:start;padding:32px 0;border-top:1px solid var(--b);}
+.bl-row:last-child{border-bottom:1px solid var(--b);}
+.bl-idx{font-size:13px;font-weight:600;color:var(--b);padding-top:3px;font-variant-numeric:tabular-nums;}
+.bl-name{font-size:18px;font-weight:600;color:var(--t);margin-bottom:5px;display:flex;align-items:center;gap:10px;}
+.bl-desc{font-size:14px;color:var(--mt);line-height:1.65;max-width:520px;margin-top:3px;}
+.bl-right{text-align:right;}
+.bl-mrr{font-size:28px;font-weight:600;color:var(--g);line-height:1;}
+.bl-mrrsub{font-size:11px;color:var(--mt);margin-top:3px;}
+.bl-badgew{margin-top:10px;display:flex;justify-content:flex-end;}
+.dot-g{display:inline-block;width:9px;height:9px;border-radius:50%;background:#7EC8A0;flex-shrink:0;}
+.dot-a{display:inline-block;width:9px;height:9px;border-radius:50%;background:#F0C040;flex-shrink:0;}
+.dot-b{display:inline-block;width:9px;height:9px;border-radius:50%;background:#74B9FF;flex-shrink:0;}
+
+/* TOTAL STRIP */
+.total{display:flex;align-items:center;justify-content:space-between;padding:28px 36px;background:var(--g);border-radius:10px;margin-top:10px;flex-wrap:wrap;gap:20px;}
+.total-n{font-size:40px;font-weight:600;color:#fff;line-height:1;}
+.total-nl{font-size:12px;color:rgba(255,255,255,0.4);margin-top:3px;}
+.total-stats{display:flex;gap:0;}
+.ts{padding:0 28px;text-align:center;}
+.ts:first-child{padding-left:0;}
+.ts-n{font-size:22px;font-weight:600;color:#fff;line-height:1;}
+.ts-l{font-size:10px;color:rgba(255,255,255,0.35);margin-top:3px;text-transform:uppercase;letter-spacing:0.5px;}
+
+/* ══ ISP ═══════════════════════════════════════════════════════════ */
+.isp-grid{display:grid;grid-template-columns:1fr 360px;gap:56px;align-items:start;}
+.pkg-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;}
+.pkgc{border-radius:10px;overflow:hidden;}
+.phead{padding:22px 22px 18px;}
+.phead-lt{background:var(--gl);}
+.phead-dk{background:var(--g);}
+.pey{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--mt);margin-bottom:5px;}
+.phead-dk .pey{color:rgba(255,255,255,0.35);}
+.ptitle{font-size:15px;font-weight:600;color:var(--t);}
+.phead-dk .ptitle{color:#fff;}
+.pprice{font-size:28px;font-weight:600;color:var(--g);line-height:1;margin-top:10px;}
+.phead-dk .pprice{color:#fff;}
+.pprice span{font-size:14px;font-weight:400;}
+.psub{font-size:11px;color:var(--mt);margin-top:3px;}
+.phead-dk .psub{color:rgba(255,255,255,0.38);}
+.pbody{background:#fff;padding:14px 22px;}
+.pf{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--mt);padding:4px 0;line-height:1.4;}
+.pf::before{content:'✓';color:var(--g);font-weight:700;flex-shrink:0;font-size:11px;margin-top:2px;}
+.resbox{padding:18px 22px;background:var(--gl);border-radius:10px;}
+.reslbl{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--g);margin-bottom:6px;}
+.resdesc{font-size:13px;color:var(--mt);line-height:1.65;}
+.area-aside{background:var(--g);border-radius:10px;padding:26px;}
+.area-hd{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:14px;}
+.aitem{padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.07);}
+.aitem:last-child{border-bottom:none;}
+.am{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:4px;}
+.atowns{font-size:13px;color:rgba(255,255,255,0.7);line-height:1.6;}
+.anote{font-size:11px;color:rgba(255,255,255,0.3);margin-top:2px;}
+.area-tot{margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.1);}
+.aton{font-size:34px;font-weight:600;color:#fff;line-height:1;}
+.atol{font-size:12px;color:rgba(255,255,255,0.35);margin-top:4px;}
+.atom{font-size:24px;font-weight:600;color:#fff;margin-top:12px;line-height:1;}
+.atoml{font-size:11px;color:rgba(255,255,255,0.35);margin-top:3px;}
+
+/* ══ HOTSPOT ═══════════════════════════════════════════════════════ */
+.hs-math{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:48px;}
+.hmc{border-radius:10px;padding:24px;}
+.hmc-lt{background:var(--gl);}
+.hmc-dk{background:var(--g);}
+.hmc-n{font-size:36px;font-weight:600;color:var(--g);line-height:1;}
+.hmc-dk .hmc-n{color:#fff;}
+.hmc-l{font-size:12px;color:var(--mt);margin-top:6px;}
+.hmc-dk .hmc-l{color:rgba(255,255,255,0.4);}
+.hs-layout{display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:start;}
+.hs-mlbl{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--g);margin:20px 0 8px;}
+.hs-mlbl:first-child{margin-top:0;}
+.hs-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;}
+.hnode{background:var(--gl);border-radius:8px;padding:9px 13px;display:flex;align-items:center;gap:9px;}
+.hnode-d{width:6px;height:6px;border-radius:50%;flex-shrink:0;background:var(--g);}
+.hnode-d.m2{opacity:0.65;}
+.hnode-d.m3{background:#1C3B15;}
+.hnode-nm{font-size:12px;font-weight:600;color:var(--t);}
+.hnode-t{font-size:11px;color:var(--mt);}
+.hs-ramp{background:var(--g);border-radius:10px;padding:24px;}
+.hsrh{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:12px;}
+.hsrr{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.07);}
+.hsrr:last-child{border-bottom:none;}
+.hsrm{font-size:12px;font-weight:600;color:rgba(255,255,255,0.5);}
+.hsrn{font-size:22px;font-weight:600;color:#fff;}
+
+/* ══ CCTV ══════════════════════════════════════════════════════════ */
+.cctv-layout{display:grid;grid-template-columns:1fr 320px;gap:56px;align-items:start;}
+.sbanner{background:rgba(240,195,60,0.08);border:1px solid rgba(240,195,60,0.2);border-radius:10px;padding:16px 20px;margin-bottom:32px;display:flex;align-items:flex-start;gap:12px;}
+.sbi{font-size:15px;flex-shrink:0;line-height:1.5;}
+.sbt{font-size:13px;font-weight:600;color:#F0C040;margin-bottom:3px;}
+.sbd{font-size:13px;color:rgba(255,255,255,0.4);line-height:1.6;}
+.bstep{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,0.07);}
+.bstep:last-child{border-bottom:none;}
+.bsn{font-size:12px;font-weight:600;color:rgba(255,255,255,0.2);padding-top:1px;flex-shrink:0;width:20px;}
+.bst{font-size:14px;font-weight:600;color:#fff;margin-bottom:3px;}
+.bsd{font-size:13px;color:rgba(255,255,255,0.4);line-height:1.6;}
+.cctv-hd{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:10px;}
+.crow{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;background:rgba(255,255,255,0.06);border-radius:8px;margin-bottom:6px;}
+.crn{font-size:14px;font-weight:600;color:#fff;margin-bottom:2px;}
+.crd{font-size:11px;color:rgba(255,255,255,0.35);}
+.crs{font-size:24px;font-weight:600;color:#fff;}
+.cctv-tot{background:rgba(255,255,255,0.09);border-radius:8px;padding:18px 16px;margin-top:8px;}
+.ctotn{font-size:30px;font-weight:600;color:#fff;line-height:1;}
+.ctotl{font-size:11px;color:rgba(255,255,255,0.35);margin-top:4px;}
+
+/* ══ 90-DAY ════════════════════════════════════════════════════════ */
+.tl{display:grid;grid-template-columns:1fr 28px 1fr 28px 1fr;gap:0;}
+.tlcol{border-radius:10px;overflow:hidden;display:flex;flex-direction:column;}
+.tlh{padding:22px 24px;}
+.tlh1{background:var(--g);}
+.tlh2{background:#274E1A;}
+.tlh3{background:var(--gd);}
+.tlm{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:4px;}
+.tltitle{font-size:18px;font-weight:600;color:#fff;line-height:1.2;margin-bottom:3px;}
+.tlperiod{font-size:12px;color:rgba(255,255,255,0.4);}
+.tlbody{background:#fff;padding:18px 24px;flex:1;}
+.tll{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--g);margin:14px 0 7px;}
+.tll:first-child{margin-top:0;}
+.tlit{margin-bottom:9px;}
+.tlit-t{font-size:12px;font-weight:600;color:var(--t);line-height:1.3;}
+.tlit-d{font-size:11px;color:var(--mt);margin-top:2px;line-height:1.45;}
+.tlkpis{background:var(--gl);padding:14px 24px;display:flex;justify-content:space-between;}
+.kpin{font-size:20px;font-weight:600;color:var(--g);line-height:1;}
+.kpil{font-size:10px;color:var(--mt);margin-top:2px;text-transform:uppercase;letter-spacing:0.5px;}
+.tlkpis-dk{background:var(--gd);}
+.tlkpis-dk .kpin{color:#fff;}
+.tlkpis-dk .kpil{color:rgba(255,255,255,0.35);}
+.tlarr{display:flex;align-items:center;justify-content:center;padding-top:48px;}
+
+/* ══ REVENUE ═══════════════════════════════════════════════════════ */
+.rev-center{text-align:center;margin-bottom:56px;}
+.rev-giant{font-size:clamp(52px,6.5vw,96px);font-weight:600;color:#fff;line-height:1;letter-spacing:-2px;}
+.rev-gl{font-size:13px;color:rgba(255,255,255,0.3);margin-top:10px;letter-spacing:1px;text-transform:uppercase;}
+.rev-streams{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.08);border-radius:10px;overflow:hidden;margin-bottom:48px;}
+.rstream{background:rgba(255,255,255,0.03);padding:26px 22px;}
+.rsdot{width:7px;height:7px;border-radius:50%;margin-bottom:12px;}
+.rsname{font-size:11px;font-weight:600;color:rgba(255,255,255,0.35);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:8px;}
+.rsn{font-size:26px;font-weight:600;color:#fff;line-height:1;margin-bottom:6px;}
+.rscalc{font-size:12px;color:rgba(255,255,255,0.28);line-height:1.5;}
+.rev-prog{display:flex;flex-direction:column;gap:12px;}
+.rpr{display:grid;grid-template-columns:72px 1fr 140px;gap:12px;align-items:center;}
+.rpm{font-size:12px;font-weight:600;color:rgba(255,255,255,0.4);}
+.rpbar{height:6px;background:rgba(255,255,255,0.1);border-radius:3px;overflow:hidden;}
+.rpfill{height:100%;border-radius:3px;background:rgba(255,255,255,0.45);}
+.rpn{font-size:14px;font-weight:600;color:#fff;text-align:right;}
+
+/* ══ CLOSE ══════════════════════════════════════════════════════════ */
+.close-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;}
+.ci{display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--b);}
+.ci:last-child{border-bottom:none;}
+.cidc{width:8px;height:8px;border-radius:50%;background:var(--g);flex-shrink:0;margin-top:5px;}
+.cit{font-size:15px;font-weight:600;color:var(--t);margin-bottom:3px;}
+.cid{font-size:14px;color:var(--mt);line-height:1.65;}
+.contact-lbl{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--mt);margin-bottom:4px;margin-top:24px;}
+.contact-lbl:first-child{margin-top:0;}
+.contact-val{font-size:15px;font-weight:600;color:var(--t);}
+
+/* ══ DELIVERABLES REGISTER ════════════════════════════════════ */
+.dlv-phase{display:flex;align-items:center;gap:16px;padding:14px 20px;background:var(--g);border-radius:8px;margin:36px 0 4px;}
+.dlv-phase:first-child{margin-top:0;}
+.dlv-ph-num{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4);}
+.dlv-ph-title{font-size:14px;font-weight:600;color:#fff;flex:1;}
+.dlv-ph-date{font-size:12px;color:rgba(255,255,255,0.35);}
+.dlv-ph-count{font-size:11px;font-weight:600;color:rgba(255,255,255,0.35);white-space:nowrap;}
+.dlv-row{display:grid;grid-template-columns:40px 1fr auto;gap:0 20px;align-items:start;padding:20px 0;border-bottom:1px solid var(--b);}
+.dlv-row:last-child{border-bottom:none;}
+.dlv-num{font-size:12px;font-weight:600;color:var(--b);padding-top:2px;font-variant-numeric:tabular-nums;}
+.dlv-title{font-size:15px;font-weight:600;color:var(--t);margin-bottom:4px;}
+.dlv-desc{font-size:13px;color:var(--mt);line-height:1.6;}
+.dlv-right{display:flex;flex-direction:column;align-items:flex-end;gap:8px;padding-top:2px;}
+.dlv-cat{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:3px 10px;border-radius:4px;white-space:nowrap;}
+.cat-isp{background:rgba(45,85,35,0.1);color:var(--g);}
+.cat-hs{background:rgba(240,195,60,0.1);color:#8A6800;}
+.cat-cctv{background:rgba(116,185,255,0.12);color:#2A70B8;}
+.dlv-status{font-size:11px;font-weight:600;color:var(--b);white-space:nowrap;}
+
+/* FOOTER */
+footer{background:var(--gd);padding:24px 0;}
+.fi{max-width:var(--w);margin:0 auto;padding:0 48px;display:flex;align-items:center;justify-content:space-between;}
+.fcopy{font-size:11px;color:rgba(255,255,255,0.22);letter-spacing:0.3px;}
+
+/* ══ COVERAGE / HEATMAP ═══════════════════════════════════════ */
+.cov-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:36px;}
+.cov-sc{background:var(--gl);border-radius:10px;padding:20px 22px;}
+.cov-sc-n{font-size:36px;font-weight:600;color:var(--g);line-height:1;}
+.cov-sc-l{font-size:11px;color:var(--mt);margin-top:5px;}
+.cov-sc-r{font-size:12px;font-weight:600;color:var(--t);margin-top:8px;}
+.cov-filters{display:flex;gap:8px;margin-bottom:32px;flex-wrap:wrap;}
+.cov-filter{padding:7px 18px;border-radius:100px;font-size:12px;font-weight:600;color:var(--mt);background:var(--gl);cursor:pointer;transition:all .15s;font-family:'Outfit',sans-serif;letter-spacing:0.2px;border:none;}
+.cov-filter:hover{color:var(--g);background:#E6EDE3;}
+.cov-filter.on{background:var(--g);color:#fff;}
+/* Phase group layout */
+.ph-group{margin-bottom:36px;}
+.ph-hd{display:flex;align-items:center;gap:14px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--b);}
+.ph-badge{font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:5px 12px;border-radius:4px;}
+.ph-badge.active{background:var(--g);color:#fff;}
+.ph-badge.building{background:#4A7A3A;color:#fff;}
+.ph-badge.projected{background:rgba(45,85,35,0.08);color:var(--g);}
+.ph-mo{font-size:14px;font-weight:600;color:var(--t);}
+.ph-desc{font-size:12px;color:var(--mt);}
+.ph-count{font-size:12px;font-weight:600;color:var(--b);margin-left:auto;}
+.ph-towns{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:8px;}
+.tc{border-radius:8px;padding:14px 16px;cursor:default;transition:transform .15s;}
+.tc:hover{transform:translateY(-2px);}
+.tc.active{background:var(--g);}
+.tc.building{background:#3A6B2D;}
+.tc.projected{background:var(--gl);}
+.tc-name{font-size:13px;font-weight:600;}
+.tc.active .tc-name,.tc.building .tc-name{color:#fff;}
+.tc.projected .tc-name{color:var(--t);}
+.tc-tag{font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;}
+.tc.active .tc-tag,.tc.building .tc-tag{color:rgba(255,255,255,0.38);}
+.tc.projected .tc-tag{color:var(--mt);}
+.tc-mx{font-size:10px;margin-top:6px;}
+.tc.active .tc-mx,.tc.building .tc-mx{color:rgba(255,255,255,0.52);}
+.tc.projected .tc-mx{color:var(--mt);}
+
+/* ══ CHARTS ══════════════════════════════════════════════════════ */
+.chart-lbl{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:14px;}
+.rev-chart-row{display:grid;grid-template-columns:1fr 210px;gap:48px;align-items:start;margin-top:40px;}
+.dl-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.07);}
+.dl-row:last-child{border-bottom:none;}
+.dl-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+.dl-name{font-size:13px;color:rgba(255,255,255,0.45);flex:1;}
+.dl-pct{font-size:11px;font-weight:600;color:rgba(255,255,255,0.3);width:32px;}
+.dl-val{font-size:14px;font-weight:600;color:#fff;}
+.dc-chart{padding:4px 0 10px;}
+.dc-row{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+.dc-mo{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.28);width:52px;flex-shrink:0;}
+.dc-track{flex:1;height:24px;background:rgba(255,255,255,0.05);border-radius:3px;overflow:hidden;}
+.dc-bar{height:100%;border-radius:3px;display:flex;align-items:center;padding:0 9px;}
+.dc-v{font-size:11px;font-weight:600;color:#fff;}
+.isp-deploy{margin-top:24px;}
+.isp-deploy .chart-lbl{color:var(--mt);}
+.isp-dc-row{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+.isp-dc-mo{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--b);width:52px;flex-shrink:0;}
+.isp-dc-track{flex:1;height:24px;background:var(--gl);border-radius:3px;overflow:hidden;}
+.isp-dc-bar{height:100%;border-radius:3px;display:flex;align-items:center;padding:0 9px;}
+.isp-dc-v{font-size:11px;font-weight:600;color:#fff;}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="topnav">
+  <div class="ni">
+    <img src="FIGBLOOM.png" class="logo" id="logo" alt="Figbloom">
+    <ul class="nl">
+      <li><a href="#deliverables">Deliverables</a></li>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#coverage">Heatmap</a></li>
+      <li><a href="#isp">ISP</a></li>
+      <li><a href="#hotspots">Hotspots</a></li>
+      <li><a href="#cctv">AI CCTV</a></li>
+      <li><a href="#plan">90-Day Plan</a></li>
+      <li><a href="#revenue">Revenue</a></li>
+    </ul>
+    <a href="#close" class="nbtn">Get In Touch</a>
+  </div>
+</nav>
+
+<!-- ══ HERO ══════════════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hm">
+    <div class="htag">90-Day Deliverables Plan · Figbloom · July – September 2026</div>
+    <h1 class="hh">Three Revenue Lines.<br>Three Months.<br>KES 1.485M MRR.</h1>
+    <p class="hsub">Figbloom deploys managed Starlink ISP, public WiFi hotspot nodes, and AI CCTV infrastructure simultaneously across Nairobi County. All three lines generating revenue by September 2026.</p>
+
+    <div class="hsvcs">
+      <div class="hsvc">
+        <div class="hsvc-lbl"><span class="hdot" style="background:#7EC8A0;"></span>ISP Residential</div>
+        <div class="hsvc-name">Starlink Managed Internet</div>
+        <div class="hsvc-n">KES 865K/mo</div>
+        <div class="hsvc-meta">80 properties · Nairobi County &amp; outer</div>
+        <span class="bgl">Live Month 1</span>
+      </div>
+      <div class="hsvc">
+        <div class="hsvc-lbl"><span class="hdot" style="background:#F0C040;"></span>Hotspot Network</div>
+        <div class="hsvc-name">M-Pesa Voucher WiFi</div>
+        <div class="hsvc-n">KES 450K/mo</div>
+        <div class="hsvc-meta">30 nodes · Markets &amp; bus stages</div>
+        <span class="bgl">Live Month 1</span>
+      </div>
+      <div class="hsvc">
+        <div class="hsvc-lbl"><span class="hdot" style="background:#74B9FF;"></span>AI CCTV</div>
+        <div class="hsvc-name">Security-as-a-Service</div>
+        <div class="hsvc-n">KES 170K/mo</div>
+        <div class="hsvc-meta">20 client sites · SMEs, schools, banks</div>
+        <span class="bgb">Live Month 2–3</span>
+      </div>
+    </div>
+  </div>
+  <div class="hfoot">Confidential · Figbloom · SMK Business Center, Enterprise Road, Nairobi · ian.duncan@figbloom.org</div>
+</section>
+
+
+<!-- ══ DELIVERABLES REGISTER ═════════════════════════════════════════ -->
+<section id="deliverables" class="sec">
+  <div class="w">
+    <div class="slbl">Deliverables Register · Figbloom · July – September 2026</div>
+    <h2 class="sh">14 Deliverables.<br>3 Phases. 90 Days.</h2>
+    <p class="slead">Every item below is a concrete, measurable output. Each deliverable has a defined category, phase, and acceptance condition. This is what Figbloom commits to building and handing over.</p>
+
+    <!-- ── Phase 1 ── -->
+    <div class="dlv-phase">
+      <div class="dlv-ph-num">Phase 1</div>
+      <div class="dlv-ph-title">Launch ISP + Hotspots</div>
+      <div class="dlv-ph-date">July 2026</div>
+      <div class="dlv-ph-count">4 deliverables</div>
+    </div>
+
+    <div class="dlv-row">
+      <div class="dlv-num">01</div>
+      <div>
+        <div class="dlv-title">NOC Infrastructure Operational</div>
+        <div class="dlv-desc">MikroTik network operations centre live. WireGuard tunnels configured. M-Pesa autopay billing operational end-to-end. Remote management for all client connections active before first installation.</div>
+      </div>
+      <div class="dlv-right"><span class="dlv-cat cat-isp">ISP</span><div class="dlv-status">Planned · July 31</div></div>
+    </div>
+
+    <div class="dlv-row">
+      <div class="dlv-num">02</div>
+      <div>
+        <div class="dlv-title">20 ISP Residential Properties Installed</div>
+        <div class="dlv-desc">Starlink dish, MikroTik router, and WireGuard client deployed at each property. Client on M-Pesa autopay. NOC monitoring confirmed. Areas: Kasarani, Roysambu, South B, South C, Ongata Rongai.</div>
+      </div>
+      <div class="dlv-right"><span class="dlv-cat cat-isp">ISP</span><div class="dlv-status">Planned · July 31</div></div>
+    </div>
+
+    <div class="dlv-row">
+      <div class="dlv-num">03</div>
+      <div>
+        <div class="dlv-title">8 Hotspot Nodes Deployed &amp; Revenue-Generating</div>
+        <div class="dlv-desc">M-Pesa voucher WiFi nodes live at high-traffic public locations. Each node verified generating daily session revenue before acceptance. Locations: Kasarani, Githurai 45, Ongata Rongai, South C, Roysambu, Eastleigh, Ngong Road, Kiambu Road.</div>
+      </div>
+      <div class="dlv-right"><span class="dlv-cat cat-hs">Hotspot</span><div class="dlv-status">Planned · July 31</div></div>
+    </div>
+
+    <div class="dlv-row">
+      <div class="dlv-num">04</div>
+      <div>
+        <div class="dlv-title">AI CCTV Build Commenced</div>
+        <div class="dlv-desc">Camera hardware procured and tested. AI cloud platform integrated. WhatsApp + SMS alert pipeline configured. Internal acceptance testing complete before first client site.</div>
+      </div>
+      <div class="dlv-right"><span class="dlv-cat cat-cctv">AI CCTV</span><div class="dlv-status">Planned · July 31</div></div>
+    </div>
+
+    <!-- ── Phase 2 ── -->
+    <div class="dlv-phase">
+      <div class="dlv-ph-num">Phase 2</div>
+      <div class="dlv-ph-title">Scale + CCTV Launch</div>
+      <div class="dlv-ph-date">August 2026</div>
+      <div class="dlv-ph-count">5 deliverables</div>
+    </div>
+
+    <div class="dlv-row">
+      <div class="dlv-num">05</div>
+      <div>
+        <div class="dlv-title">+35 ISP Properties Installed — 55 Total</div>
+        <div class="dlv-desc">Scale into higher-density residential and SOHO areas. Each installation follows the same NOC onboarding protocol as Phase 1. Areas: Karen, Langata, Westlands, Parklands, Embakasi, Kitengela.</div>
+      </div>
+      <div class="dlv-right"><span class="dlv-cat cat-isp">ISP</span><div class="dlv-status">Planned · Aug 31</div></div>
+    </div>
+
+    <div class="dlv-row">
+      <div class="dlv-num">06</div>
+      <div>
+        <div class="dlv-title">12 Additional Hotspot Nodes — 20 Total</div>
+        <div class="dlv-desc">Expand into satellite and outer areas. New locations: Westlands, Pipeline, Umoja, Kayole, Kahawa, Ruiru, Ruaka, Kikuyu, Syokimau, Mlolongo, Athi River, Kitengela.</div>
+      </div>
+      <div class="dlv-right"><span class="dlv-cat cat-hs">Hotspot</span><div class="dlv-status">Planned · Aug 31</div></div>
+    </div>
+
+    <div class="dlv-row">
+      <div class="dlv-num">07</div>
+      <div>
+        <div class="dlv-title">AI CCTV Infrastructure Complete</div>
+        <div class="dlv-desc">Full AI platform operational. Client mobile dashboard live. NOC integration with ISP monitoring confirmed. Billing system tested with M-Pesa subscription autopay for CCTV clients.</div>
+      </div>
+      <div class="dlv-right"><span class="dlv-cat cat-cctv">AI CCTV</span><div class="dlv-status">Planned · Aug 15</div></div>
+    </div>
+
+    <div class="dlv-row">
+      <div class="dlv-num">08</div>
+      <div>
+        <div class="dlv-title">First 5 CCTV Client Sites Live</div>
+        <div class="dlv-desc">Cameras installed, AI alerts active, client dashboard access confirmed. Mix: 3 SMEs, 1 school, 1 bank. Each site on a signed monthly M-Pesa contract before acceptance.</div>
+      </div>
+      <div class="dlv-right"><span class="dlv-cat cat-cctv">AI CCTV</span><div class="dlv-status">Planned · Aug 31</div></div>
+    </div>
+
+    <div class="dlv-row">
+      <div class="dlv-num">09</div>
+      <div>
+        <div class="dlv-title">2 Certified Resellers Operational</div>
+        <div class="dlv-desc">Resellers trained on NOC onboarding, MikroTik installation, and M-Pesa billing. Each has completed at least one verified client installation independently before acceptance.</div>
+      </div>
+      <div class="dlv-right"><span class="dlv-cat cat-isp">ISP</span><div class="dlv-status">Planned · Aug 31</div></div>
+    </div>
+
+    <!-- ── Phase 3 ── -->
+    <div class="dlv-phase">
+      <div class="dlv-ph-num">Phase 3</div>
+      <div class="dlv-ph-title">Full Scale — All Three Lines</div>
+      <div class="dlv-ph-date">September 2026</div>
+      <div class="dlv-ph-count">5 deliverables</div>
+    </div>
+
+    <div class="dlv-row">
+      <div class="dlv-num">10</div>
+      <div>
+        <div class="dlv-title">80 ISP Properties Total — Outer Counties</div>
+        <div class="dlv-desc">Final 25 installs expand into Ruiru, Thika, Athi River, Machakos, and Kiambu Town. All 80 properties active on M-Pesa autopay with NOC monitoring confirmed.</div>
+      </div>
+      <div class="dlv-right"><span class="dlv-cat cat-isp">ISP</span><div class="dlv-status">Planned · Sep 30</div></div>
+    </div>
+
+    <div class="dlv-row">
+      <div class="dlv-num">11</div>
+      <div>
+        <div class="dlv-title">30 Hotspot Nodes Active Across 35 Towns</div>
+        <div class="dlv-desc">Final 10 nodes deployed in outer county towns. All 30 nodes verified generating daily revenue. Towns: Kiambu, Thika, Machakos, Ngong, Limuru, Athi River Market, Kangundo, Kajiado, Naivasha, Ol Kalou.</div>
+      </div>
+      <div class="dlv-right"><span class="dlv-cat cat-hs">Hotspot</span><div class="dlv-status">Planned · Sep 30</div></div>
+    </div>
+
+    <div class="dlv-row">
+      <div class="dlv-num">12</div>
+      <div>
+        <div class="dlv-title">20 CCTV Client Sites Live</div>
+        <div class="dlv-desc">15 additional client sites installed in September. Final mix: 10 SMEs, 4 schools, 3 banks, 3 security/property clients. All on monthly M-Pesa contracts with active AI monitoring.</div>
+      </div>
+      <div class="dlv-right"><span class="dlv-cat cat-cctv">AI CCTV</span><div class="dlv-status">Planned · Sep 30</div></div>
+    </div>
+
+    <div class="dlv-row">
+      <div class="dlv-num">13</div>
+      <div>
+        <div class="dlv-title">5 Certified Resellers Operational</div>
+        <div class="dlv-desc">Reseller network scaled to 5 active partners across Nairobi and outer counties. Each verified through completed independent installations and confirmed M-Pesa billing setup.</div>
+      </div>
+      <div class="dlv-right"><span class="dlv-cat cat-isp">ISP</span><div class="dlv-status">Planned · Sep 30</div></div>
+    </div>
+
+    <div class="dlv-row">
+      <div class="dlv-num">14</div>
+      <div>
+        <div class="dlv-title">Full NOC Coverage — 35 Towns, 3 Revenue Lines Running</div>
+        <div class="dlv-desc">All 80 ISP properties, 30 hotspot nodes, and 20 CCTV sites under centralised NOC monitoring simultaneously. Three separate revenue streams confirmed generating recurring monthly income.</div>
+      </div>
+      <div class="dlv-right"><span class="dlv-cat cat-isp">ISP</span><div class="dlv-status">Planned · Sep 30</div></div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══ OVERVIEW ══════════════════════════════════════════════════════ -->
+<section id="overview" class="sec">
+  <div class="w">
+    <div class="slbl">Business Lines</div>
+    <h2 class="sh">Three separate revenue streams.<br>Different markets. Different timelines.</h2>
+    <p class="slead">ISP and Hotspots launch Month 1. CCTV infrastructure builds in parallel and goes live from Month 2. By September 2026 all three lines are generating recurring revenue simultaneously.</p>
+
+    <div>
+      <div class="bl-row">
+        <div class="bl-idx">01</div>
+        <div>
+          <div class="bl-name"><span class="dot-g"></span>ISP Residential</div>
+          <div class="bl-desc">Managed Starlink internet for homes, apartments and estates. MikroTik + WireGuard + M-Pesa autopay. The client never touches a router — we manage everything from our NOC. Target market: residential properties and small businesses across Nairobi County and outer counties.</div>
+        </div>
+        <div class="bl-right">
+          <div class="bl-mrr">KES 865K/mo</div>
+          <div class="bl-mrrsub">50 × KES 6,500 + 30 × KES 18,000</div>
+          <div class="bl-badgew"><span class="bgl">Live Month 1</span></div>
+        </div>
+      </div>
+
+      <div class="bl-row">
+        <div class="bl-idx">02</div>
+        <div>
+          <div class="bl-name"><span class="dot-a"></span>Public Hotspot Network</div>
+          <div class="bl-desc">M-Pesa voucher WiFi nodes at open markets, bus stages and shopping centres. Anyone nearby pays KES 10–50 via M-Pesa and gets instant WiFi — no SIM data plan needed. Revenue is daily and immediate. Target: 8 nodes Month 1, scaling to 30 nodes by Month 3.</div>
+        </div>
+        <div class="bl-right">
+          <div class="bl-mrr">KES 450K/mo</div>
+          <div class="bl-mrrsub">25 sessions/day × KES 20 × 30 nodes</div>
+          <div class="bl-badgew"><span class="bgl">Live Month 1</span></div>
+        </div>
+      </div>
+
+      <div class="bl-row">
+        <div class="bl-idx">03</div>
+        <div>
+          <div class="bl-name"><span class="dot-b"></span>AI CCTV Infrastructure</div>
+          <div class="bl-desc">Security-as-a-Service for SMEs, schools, banks and security firms. AI cameras, cloud recording, WhatsApp alerts. Infrastructure is being built now — first client sites go live Month 2. Target market is entirely separate from ISP (SMEs, institutions, security firms — not residential).</div>
+        </div>
+        <div class="bl-right">
+          <div class="bl-mrr">KES 170K/mo</div>
+          <div class="bl-mrrsub">20 sites × avg KES 8,500/site</div>
+          <div class="bl-badgew"><span class="bgb">Live Month 2–3</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="total">
+      <div>
+        <div class="total-n">KES 1.485M/mo</div>
+        <div class="total-nl">Combined MRR · End of Month 3 · September 2026</div>
+      </div>
+      <div class="total-stats">
+        <div class="ts"><div class="ts-n">80</div><div class="ts-l">ISP Properties</div></div>
+        <div class="ts"><div class="ts-n">30</div><div class="ts-l">Hotspot Nodes</div></div>
+        <div class="ts"><div class="ts-n">20</div><div class="ts-l">CCTV Sites</div></div>
+        <div class="ts"><div class="ts-n">65%+</div><div class="ts-l">Gross Margin</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ COVERAGE HEATMAP ══════════════════════════════════════════════ -->
+<section id="coverage" class="sec sec-alt">
+  <div class="w">
+    <div class="slbl">Geographic Coverage · 35 Towns</div>
+    <h2 class="sh">Deployment Map —<br>Towns &amp; Regions</h2>
+    <p class="slead">Coverage rolls out in three phases. Month 1 launches 9 towns with active contracts. Month 2 deploys infrastructure across 16 more. Month 3 completes the full 35-town network across Nairobi and five outer counties.</p>
+
+    <div class="cov-summary">
+      <div class="cov-sc">
+        <div class="cov-sc-n">9</div>
+        <div class="cov-sc-l">towns · Month 1</div>
+        <div class="cov-sc-r">ISP + Hotspot Active</div>
+      </div>
+      <div class="cov-sc">
+        <div class="cov-sc-n">16</div>
+        <div class="cov-sc-l">towns · Month 2</div>
+        <div class="cov-sc-r">Infrastructure Deploying</div>
+      </div>
+      <div class="cov-sc">
+        <div class="cov-sc-n">10</div>
+        <div class="cov-sc-l">towns · Month 3</div>
+        <div class="cov-sc-r">All 3 Revenue Lines Live</div>
+      </div>
+    </div>
+
+    <div class="cov-filters">
+      <button class="cov-filter on" onclick="filterTowns('all',this)">All 35 Towns</button>
+      <button class="cov-filter" onclick="filterTowns('active',this)">Active · Month 1</button>
+      <button class="cov-filter" onclick="filterTowns('building',this)">Building · Month 2</button>
+      <button class="cov-filter" onclick="filterTowns('projected',this)">Projected · Month 3</button>
+    </div>
+
+    <div id="covPhaseGroups"></div>
+  </div>
+</section>
+
+
+<!-- ══ ISP RESIDENTIAL ═══════════════════════════════════════════════ -->
+<section id="isp" class="sec sec-alt">
+  <div class="w">
+    <div class="slbl">Business Line 1 · Live from July 2026</div>
+    <h2 class="sh">ISP Residential —<br>Starlink Managed Internet</h2>
+    <div class="isp-grid">
+      <div>
+        <p style="font-size:16px;color:var(--mt);line-height:1.8;margin-bottom:28px;">We install Starlink, configure MikroTik routing, set up WireGuard remote access, and connect billing to M-Pesa autopay. The client pays monthly and never manages their own equipment.</p>
+
+        <div class="pkg-pair">
+          <div class="pkgc">
+            <div class="phead phead-lt">
+              <div class="pey">Home / SOHO</div>
+              <div class="ptitle">Residential</div>
+              <div class="pprice">KES 6,500<span>/mo</span></div>
+              <div class="psub">+ KES 35,000 one-time setup</div>
+            </div>
+            <div class="pbody">
+              <div class="pf">Starlink residential dish installed</div>
+              <div class="pf">Up to 150Mbps download</div>
+              <div class="pf">MikroTik + M-Pesa autopay</div>
+              <div class="pf">WireGuard remote access</div>
+            </div>
+          </div>
+          <div class="pkgc">
+            <div class="phead phead-dk">
+              <div class="pey">Most Popular</div>
+              <div class="ptitle">Business / Estate</div>
+              <div class="pprice">KES 18,000<span>/mo</span></div>
+              <div class="psub">+ KES 85,000 one-time setup</div>
+            </div>
+            <div class="pbody">
+              <div class="pf">Starlink Business dish (priority bandwidth)</div>
+              <div class="pf">Up to 300Mbps download</div>
+              <div class="pf">MikroTik + VLAN + hotspot vouchers</div>
+              <div class="pf">Dedicated account manager</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resbox">
+          <div class="reslbl">Reseller Programme</div>
+          <div class="resdesc">Certified resellers install and sell on our behalf on a revenue-share model. They bring the clients — we manage billing and the NOC. <strong style="color:var(--t);">Target: 5 active resellers by Month 3.</strong></div>
+        </div>
+      </div>
+
+      <div class="area-aside">
+        <div class="area-hd">Deployment Areas</div>
+        <div class="aitem">
+          <div class="am">Month 1 · 20 Properties</div>
+          <div class="atowns">Kasarani · Roysambu · South B<br>South C · Ongata Rongai</div>
+          <div class="anote">Core Nairobi estates</div>
+        </div>
+        <div class="aitem">
+          <div class="am">Month 2 · +35 Properties</div>
+          <div class="atowns">Karen · Langata · Westlands<br>Parklands · Embakasi · Kitengela</div>
+          <div class="anote">Expanded Nairobi coverage</div>
+        </div>
+        <div class="aitem">
+          <div class="am">Month 3 · +25 Properties</div>
+          <div class="atowns">Ruiru · Thika · Athi River<br>Machakos · Kiambu Town</div>
+          <div class="anote">Outer counties expansion begins</div>
+        </div>
+        <div class="area-tot">
+          <div class="aton">80 properties</div>
+          <div class="atol">Total by end of Month 3</div>
+          <div class="atom">KES 865K/mo</div>
+          <div class="atoml">50 × KES 6,500 + 30 × KES 18,000</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ HOTSPOT NETWORK ════════════════════════════════════════════════ -->
+<section id="hotspots" class="sec">
+  <div class="w">
+    <div class="slbl">Business Line 2 · Live from July 2026</div>
+    <h2 class="sh">Public Hotspot Network —<br>30 Nodes, Daily M-Pesa Revenue</h2>
+
+    <div class="hs-math">
+      <div class="hmc hmc-lt">
+        <div class="hmc-n">KES 10–50</div>
+        <div class="hmc-l">Per session · 1hr or daily pass</div>
+      </div>
+      <div class="hmc hmc-lt">
+        <div class="hmc-n">25 sessions</div>
+        <div class="hmc-l">Average paid sessions per node per day</div>
+      </div>
+      <div class="hmc hmc-dk">
+        <div class="hmc-n">KES 450K/mo</div>
+        <div class="hmc-l">30 nodes × 25 sessions × KES 20 × 30 days</div>
+      </div>
+    </div>
+
+    <div class="hs-layout">
+      <div class="hs-nodes">
+        <div class="hs-mlbl">Month 1 · 8 Nodes</div>
+        <div class="hs-grid">
+          <div class="hnode"><div class="hnode-d"></div><div><div class="hnode-nm">Kasarani Market</div><div class="hnode-t">Open market</div></div></div>
+          <div class="hnode"><div class="hnode-d"></div><div><div class="hnode-nm">Githurai 45 Stage</div><div class="hnode-t">Bus terminus</div></div></div>
+          <div class="hnode"><div class="hnode-d"></div><div><div class="hnode-nm">Ongata Rongai Stage</div><div class="hnode-t">Bus terminus</div></div></div>
+          <div class="hnode"><div class="hnode-d"></div><div><div class="hnode-nm">South C Shopping Centre</div><div class="hnode-t">Shopping centre</div></div></div>
+          <div class="hnode"><div class="hnode-d"></div><div><div class="hnode-nm">Roysambu Market</div><div class="hnode-t">Open market</div></div></div>
+          <div class="hnode"><div class="hnode-d"></div><div><div class="hnode-nm">Eastleigh Stage</div><div class="hnode-t">Bus terminus</div></div></div>
+          <div class="hnode"><div class="hnode-d"></div><div><div class="hnode-nm">Ngong Road Plaza</div><div class="hnode-t">Shopping plaza</div></div></div>
+          <div class="hnode"><div class="hnode-d"></div><div><div class="hnode-nm">Kiambu Road Estate</div><div class="hnode-t">Estate entrance</div></div></div>
+        </div>
+
+        <div class="hs-mlbl">Month 2 · +12 Nodes</div>
+        <div class="hs-grid">
+          <div class="hnode"><div class="hnode-d m2"></div><div><div class="hnode-nm">Westlands Stage</div></div></div>
+          <div class="hnode"><div class="hnode-d m2"></div><div><div class="hnode-nm">Pipeline Market</div></div></div>
+          <div class="hnode"><div class="hnode-d m2"></div><div><div class="hnode-nm">Umoja Stage</div></div></div>
+          <div class="hnode"><div class="hnode-d m2"></div><div><div class="hnode-nm">Kayole Market</div></div></div>
+          <div class="hnode"><div class="hnode-d m2"></div><div><div class="hnode-nm">Kahawa Market</div></div></div>
+          <div class="hnode"><div class="hnode-d m2"></div><div><div class="hnode-nm">Ruiru Market</div></div></div>
+          <div class="hnode"><div class="hnode-d m2"></div><div><div class="hnode-nm">Ruaka Stage</div></div></div>
+          <div class="hnode"><div class="hnode-d m2"></div><div><div class="hnode-nm">Kikuyu Stage</div></div></div>
+          <div class="hnode"><div class="hnode-d m2"></div><div><div class="hnode-nm">Syokimau Stage</div></div></div>
+          <div class="hnode"><div class="hnode-d m2"></div><div><div class="hnode-nm">Mlolongo Stage</div></div></div>
+          <div class="hnode"><div class="hnode-d m2"></div><div><div class="hnode-nm">Athi River Stage</div></div></div>
+          <div class="hnode"><div class="hnode-d m2"></div><div><div class="hnode-nm">Kitengela Stage</div></div></div>
+        </div>
+
+        <div class="hs-mlbl">Month 3 · +10 Nodes</div>
+        <div class="hs-grid">
+          <div class="hnode"><div class="hnode-d m3"></div><div><div class="hnode-nm">Kiambu Town</div></div></div>
+          <div class="hnode"><div class="hnode-d m3"></div><div><div class="hnode-nm">Thika Stage</div></div></div>
+          <div class="hnode"><div class="hnode-d m3"></div><div><div class="hnode-nm">Machakos Town</div></div></div>
+          <div class="hnode"><div class="hnode-d m3"></div><div><div class="hnode-nm">Ngong Market</div></div></div>
+          <div class="hnode"><div class="hnode-d m3"></div><div><div class="hnode-nm">Limuru Stage</div></div></div>
+          <div class="hnode"><div class="hnode-d m3"></div><div><div class="hnode-nm">Athi River Market</div></div></div>
+          <div class="hnode"><div class="hnode-d m3"></div><div><div class="hnode-nm">Kangundo Stage</div></div></div>
+          <div class="hnode"><div class="hnode-d m3"></div><div><div class="hnode-nm">Kajiado Town</div></div></div>
+          <div class="hnode"><div class="hnode-d m3"></div><div><div class="hnode-nm">Naivasha Stage</div></div></div>
+          <div class="hnode"><div class="hnode-d m3"></div><div><div class="hnode-nm">Ol Kalou Stage</div></div></div>
+        </div>
+      </div>
+
+      <div class="hs-ramp">
+        <div class="hsrh">Node Deployment &amp; Revenue Ramp</div>
+        <div class="dc-chart">
+          <div class="dc-row"><div class="dc-mo">Month 1</div><div class="dc-track"><div class="dc-bar" style="width:26.7%;background:rgba(255,255,255,0.2);"><span class="dc-v">8 nodes</span></div></div></div>
+          <div class="dc-row"><div class="dc-mo">Month 2</div><div class="dc-track"><div class="dc-bar" style="width:66.7%;background:rgba(255,255,255,0.32);"><span class="dc-v">20 nodes</span></div></div></div>
+          <div class="dc-row"><div class="dc-mo">Month 3</div><div class="dc-track"><div class="dc-bar" style="width:100%;background:#4A7A3A;"><span class="dc-v">30 nodes</span></div></div></div>
+        </div>
+        <div class="hsrr"><div class="hsrm">Month 1 · 8 nodes</div><div class="hsrn">KES 120K</div></div>
+        <div class="hsrr"><div class="hsrm">Month 2 · 20 nodes</div><div class="hsrn">KES 300K</div></div>
+        <div class="hsrr"><div class="hsrm">Month 3 · 30 nodes</div><div class="hsrn">KES 450K</div></div>
+        <div style="margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.1);">
+          <div style="font-size:12px;color:rgba(255,255,255,0.28);margin-bottom:8px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;">Node revenue</div>
+          <div style="font-size:28px;font-weight:600;color:#fff;line-height:1;">KES 15K/mo</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.35);margin-top:3px;">Per node · 25 sessions × KES 20 × 30 days</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ AI CCTV ════════════════════════════════════════════════════════ -->
+<section id="cctv" class="sec sec-dark">
+  <div class="w">
+    <div class="slbl slbl-w">Business Line 3 · Building Month 1–2 · Live Month 2–3</div>
+    <h2 class="sh sh-w">AI CCTV —<br>Security-as-a-Service</h2>
+    <p class="slead slead-w" style="margin-bottom:40px;">Target market: SMEs, schools, banks and security firms — entirely separate from the ISP residential market. Cameras run on Starlink connectivity. AI detects anomalies. Clients get WhatsApp alerts and live mobile feeds.</p>
+
+    <div class="cctv-layout">
+      <div>
+        <div class="sbanner">
+          <div class="sbi">⚠</div>
+          <div>
+            <div class="sbt">Infrastructure Build — Months 1–2</div>
+            <div class="sbd">CCTV infrastructure is under construction. Camera hardware, AI platform, and billing are being configured during Month 1–2. First client sites go live Month 2. Full commercial rollout Month 3.</div>
+          </div>
+        </div>
+
+        <div class="bstep">
+          <div class="bsn">01</div>
+          <div><div class="bst">Camera Procurement &amp; Testing</div><div class="bsd">Source AI cameras, test with cloud platforms. Define spec per client type — 4 to 16 cameras per site depending on property size.</div></div>
+        </div>
+        <div class="bstep">
+          <div class="bsn">02</div>
+          <div><div class="bst">AI Platform Integration</div><div class="bsd">Connect cameras to cloud AI — motion, intrusion, object detection. Build WhatsApp + SMS alert pipeline. Tune to reduce false alerts.</div></div>
+        </div>
+        <div class="bstep">
+          <div class="bsn">03</div>
+          <div><div class="bst">Client Dashboard &amp; NOC Integration</div><div class="bsd">Clients view live feeds on mobile app. NOC monitors all sites remotely from the same platform as ISP.</div></div>
+        </div>
+        <div class="bstep">
+          <div class="bsn">04</div>
+          <div><div class="bst">M-Pesa Subscription Billing Live</div><div class="bsd">Monthly CCTV subscription on autopay. Auto-suspend on non-payment. Same billing infrastructure as ISP.</div></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="cctv-hd">Target Clients · Month 3: 20 Sites</div>
+        <div class="crow"><div><div class="crn">SMEs &amp; Retail</div><div class="crd">Supermarkets, pharmacies, hardware</div></div><div class="crs">10</div></div>
+        <div class="crow"><div><div class="crn">Schools</div><div class="crd">Primary, secondary, TVET campuses</div></div><div class="crs">4</div></div>
+        <div class="crow"><div><div class="crn">Banks &amp; Financial</div><div class="crd">Branch CCTV + compliance monitoring</div></div><div class="crs">3</div></div>
+        <div class="crow"><div><div class="crn">Security &amp; Properties</div><div class="crd">Gated estates, apartment complexes</div></div><div class="crs">3</div></div>
+        <div class="cctv-tot">
+          <div class="ctotn">KES 170K/mo</div>
+          <div class="ctotl">20 sites × avg KES 8,500/mo · Month 3</div>
+        </div>
+        <div style="margin-top:16px;padding:18px;background:rgba(255,255,255,0.05);border-radius:8px;">
+          <div style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.3);margin-bottom:6px;letter-spacing:0.5px;">Cross-sell advantage</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.45);line-height:1.65;">A client with both Starlink ISP and CCTV from Figbloom has zero incentive to churn. Cancelling one service means losing both. ARPU doubles. Retention locks in.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 90-DAY PLAN ═══════════════════════════════════════════════════ -->
+<section id="plan" class="sec">
+  <div class="w">
+    <div class="slbl">90-Day Execution · July – September 2026</div>
+    <h2 class="sh">What Gets Delivered,<br>Month by Month</h2>
+    <p class="slead">Month 1 launches ISP and Hotspots. CCTV infrastructure builds simultaneously. By September all three lines are live and generating revenue together.</p>
+
+    <div class="tl">
+      <div class="tlcol">
+        <div class="tlh tlh1">
+          <div class="tlm">Month 1</div>
+          <div class="tltitle">Launch ISP + Hotspots</div>
+          <div class="tlperiod">July 2026</div>
+        </div>
+        <div class="tlbody">
+          <div class="tll">ISP Residential</div>
+          <div class="tlit"><div class="tlit-t">NOC Operational</div><div class="tlit-d">MikroTik + WireGuard + M-Pesa billing live</div></div>
+          <div class="tlit"><div class="tlit-t">20 Properties Installed</div><div class="tlit-d">Kasarani, Roysambu, South B, South C, Rongai</div></div>
+          <div class="tll">Hotspot Network</div>
+          <div class="tlit"><div class="tlit-t">8 Nodes Live</div><div class="tlit-d">Kasarani, Githurai, Rongai, South C, Roysambu, Eastleigh, Ngong Rd, Kiambu Rd</div></div>
+          <div class="tll">AI CCTV</div>
+          <div class="tlit"><div class="tlit-t">Infrastructure Build Begins</div><div class="tlit-d">Camera procurement, AI platform setup, alert pipeline</div></div>
+        </div>
+        <div class="tlkpis">
+          <div><div class="kpin">20</div><div class="kpil">ISP installs</div></div>
+          <div><div class="kpin">8</div><div class="kpil">HS nodes</div></div>
+          <div><div class="kpin">~250K</div><div class="kpil">MRR</div></div>
+        </div>
+      </div>
+
+      <div class="tlarr">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+
+      <div class="tlcol">
+        <div class="tlh tlh2">
+          <div class="tlm">Month 2</div>
+          <div class="tltitle">Scale + CCTV Launches</div>
+          <div class="tlperiod">August 2026</div>
+        </div>
+        <div class="tlbody">
+          <div class="tll">ISP Residential</div>
+          <div class="tlit"><div class="tlit-t">+35 Installs → 55 Total</div><div class="tlit-d">Karen, Langata, Westlands, Kitengela, Embakasi. 2 active resellers</div></div>
+          <div class="tll">Hotspot Network</div>
+          <div class="tlit"><div class="tlit-t">20 Nodes Active</div><div class="tlit-d">Add Westlands, Pipeline, Umoja, Kayole, Kahawa, Ruiru, Ruaka, Kikuyu, Syokimau, Athi River, Kitengela, Mlolongo</div></div>
+          <div class="tll">AI CCTV</div>
+          <div class="tlit"><div class="tlit-t">Infra Complete. 5 Sites Live.</div><div class="tlit-d">3 SMEs + 1 school + 1 bank. AI alerts tested. Dashboards live.</div></div>
+        </div>
+        <div class="tlkpis">
+          <div><div class="kpin">55</div><div class="kpil">ISP installs</div></div>
+          <div><div class="kpin">20</div><div class="kpil">HS nodes</div></div>
+          <div><div class="kpin">~800K</div><div class="kpil">MRR</div></div>
+        </div>
+      </div>
+
+      <div class="tlarr">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+
+      <div class="tlcol">
+        <div class="tlh tlh3">
+          <div class="tlm">Month 3</div>
+          <div class="tltitle">All Three Lines. Full Revenue.</div>
+          <div class="tlperiod">September 2026</div>
+        </div>
+        <div class="tlbody">
+          <div class="tll">ISP Residential</div>
+          <div class="tlit"><div class="tlit-t">80 Properties · Outer Counties</div><div class="tlit-d">Ruiru, Thika, Athi River, Machakos, Kiambu. 5 active resellers.</div></div>
+          <div class="tll">Hotspot Network</div>
+          <div class="tlit"><div class="tlit-t">30 Nodes Active</div><div class="tlit-d">Kiambu, Thika, Machakos, Ngong, Limuru, Kajiado + more outer areas</div></div>
+          <div class="tll">AI CCTV</div>
+          <div class="tlit"><div class="tlit-t">20 Sites Live</div><div class="tlit-d">10 SMEs + 4 schools + 3 banks + 3 security/property clients on M-Pesa contracts</div></div>
+        </div>
+        <div class="tlkpis tlkpis-dk">
+          <div><div class="kpin">80</div><div class="kpil">Properties</div></div>
+          <div><div class="kpin">30</div><div class="kpil">HS nodes</div></div>
+          <div><div class="kpin">1.485M</div><div class="kpil">MRR</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ REVENUE ═════════════════════════════════════════════════════════ -->
+<section id="revenue" class="sec sec-dark">
+  <div class="w">
+    <div class="slbl slbl-w">Financial Summary · Month 3</div>
+    <div class="rev-center">
+      <div class="rev-giant">KES 1.485M</div>
+      <div class="rev-gl">Combined Monthly Recurring Revenue · September 2026</div>
+    </div>
+
+    <div class="rev-chart-row">
+
+      <!-- ── Stacked bar chart ── -->
+      <div>
+        <div class="chart-lbl">MRR Growth · July → September 2026</div>
+        <svg viewBox="0 0 540 310" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+          <!-- Grid lines -->
+          <line x1="60" y1="244" x2="520" y2="244" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+          <line x1="60" y1="188" x2="520" y2="188" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+          <line x1="60" y1="132" x2="520" y2="132" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+          <line x1="60" y1="76" x2="520" y2="76" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+          <!-- Month 1 (x=93) · ISP 216K=30px · Hotspot 120K=17px · total 336K=47px -->
+          <rect x="93" y="214" width="110" height="30" fill="#2D5523"/>
+          <rect x="93" y="197" width="110" height="17" fill="#3F6B30"/>
+          <text x="148" y="262" text-anchor="middle" font-size="11" font-weight="600" fill="rgba(255,255,255,0.55)" font-family="Outfit,sans-serif">Month 1</text>
+          <text x="148" y="274" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.22)" font-family="Outfit,sans-serif">July 2026</text>
+          <!-- Month 2 (x=236) · ISP 595K=83px · Hotspot 300K=42px · CCTV 85K=12px · total 980K=137px -->
+          <rect x="236" y="161" width="110" height="83" fill="#2D5523"/>
+          <rect x="236" y="119" width="110" height="42" fill="#3F6B30"/>
+          <rect x="236" y="107" width="110" height="12" fill="#A07010"/>
+          <text x="291" y="262" text-anchor="middle" font-size="11" font-weight="600" fill="rgba(255,255,255,0.55)" font-family="Outfit,sans-serif">Month 2</text>
+          <text x="291" y="274" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.22)" font-family="Outfit,sans-serif">August 2026</text>
+          <!-- Month 3 (x=379) · ISP 865K=121px · Hotspot 450K=63px · CCTV 170K=24px · total 1485K=208px -->
+          <rect x="379" y="123" width="110" height="121" fill="#2D5523"/>
+          <rect x="379" y="60" width="110" height="63" fill="#3F6B30"/>
+          <rect x="379" y="36" width="110" height="24" fill="#A07010"/>
+          <text x="434" y="262" text-anchor="middle" font-size="11" font-weight="600" fill="#fff" font-family="Outfit,sans-serif">Month 3</text>
+          <text x="434" y="274" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.35)" font-family="Outfit,sans-serif">September 2026</text>
+          <!-- Legend -->
+          <rect x="60" y="292" width="10" height="8" fill="#2D5523" rx="2"/>
+          <text x="74" y="299" font-size="10" fill="rgba(255,255,255,0.35)" font-family="Outfit,sans-serif">ISP</text>
+          <rect x="110" y="292" width="10" height="8" fill="#3F6B30" rx="2"/>
+          <text x="124" y="299" font-size="10" fill="rgba(255,255,255,0.35)" font-family="Outfit,sans-serif">Hotspot</text>
+          <rect x="188" y="292" width="10" height="8" fill="#A07010" rx="2"/>
+          <text x="202" y="299" font-size="10" fill="rgba(255,255,255,0.35)" font-family="Outfit,sans-serif">AI CCTV</text>
+        </svg>
+      </div>
+
+      <!-- ── Donut + breakdown ── -->
+      <div>
+        <div class="chart-lbl">Revenue Mix · Month 3</div>
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:200px;display:block;margin:0 auto;">
+          <circle cx="100" cy="100" r="70" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="36"/>
+          <!-- ISP 58.25% = 256.2px, gap 2px -->
+          <circle cx="100" cy="100" r="70" fill="none" stroke="#2D5523" stroke-width="36"
+            stroke-dasharray="254.2 439.82" stroke-dashoffset="-109.96"/>
+          <!-- Hotspot 30.3% = 133.3px, gap 2px, starts after ISP+gap -->
+          <circle cx="100" cy="100" r="70" fill="none" stroke="#3F6B30" stroke-width="36"
+            stroke-dasharray="131.3 439.82" stroke-dashoffset="-368.16"/>
+          <!-- CCTV 11.45% = 50.3px, gap 2px -->
+          <circle cx="100" cy="100" r="70" fill="none" stroke="#A07010" stroke-width="36"
+            stroke-dasharray="48.3 439.82" stroke-dashoffset="-503.46"/>
+          <text x="100" y="97" text-anchor="middle" font-size="11" font-weight="600" fill="rgba(255,255,255,0.6)" font-family="Outfit,sans-serif">Month 3</text>
+          <text x="100" y="112" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.25)" font-family="Outfit,sans-serif">Revenue Mix</text>
+        </svg>
+        <div style="margin-top:20px;">
+          <div class="dl-row"><div class="dl-dot" style="background:#2D5523;"></div><div class="dl-name">ISP Residential</div><div class="dl-pct">58%</div></div>
+          <div class="dl-row"><div class="dl-dot" style="background:#3F6B30;"></div><div class="dl-name">Hotspot Network</div><div class="dl-pct">30%</div></div>
+          <div class="dl-row"><div class="dl-dot" style="background:#A07010;"></div><div class="dl-name">AI CCTV</div><div class="dl-pct">12%</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ COMMITMENTS + CONTACT ══════════════════════════════════════════ -->
+<section id="close" class="sec">
+  <div class="w">
+    <div class="slbl">Our Commitments</div>
+    <h2 class="sh" style="margin-bottom:48px;">Three Lines. Three Months.<br>One Company Delivering.</h2>
+
+    <div class="close-grid">
+      <div>
+        <div class="ci">
+          <div class="cidc" style="background:#7EC8A0;"></div>
+          <div><div class="cit">NOC live by July 2026</div><div class="cid">MikroTik + WireGuard + M-Pesa billing operational and tested end-to-end before first installation</div></div>
+        </div>
+        <div class="ci">
+          <div class="cidc" style="background:#7EC8A0;"></div>
+          <div><div class="cit">80 ISP residential properties installed</div><div class="cid">Across Nairobi County + Kiambu, Machakos and Kajiado by end of September 2026</div></div>
+        </div>
+        <div class="ci">
+          <div class="cidc" style="background:#F0C040;"></div>
+          <div><div class="cit">30 hotspot nodes generating daily revenue</div><div class="cid">Markets, bus stages, shopping centres across Nairobi and outer areas from Month 1</div></div>
+        </div>
+        <div class="ci">
+          <div class="cidc" style="background:#74B9FF;"></div>
+          <div><div class="cit">CCTV infrastructure built · 20 client sites live</div><div class="cid">AI platform operational. SMEs, schools, banks on monthly M-Pesa contracts by Month 3</div></div>
+        </div>
+        <div class="ci">
+          <div class="cidc"></div>
+          <div><div class="cit">KES 1.485M combined MRR proven</div><div class="cid">Model validated. Month 4 expansion self-funded from three simultaneous recurring revenue streams</div></div>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-size:32px;font-weight:600;color:var(--t);line-height:1.1;margin-bottom:24px;">Ready to discuss further.</div>
+        <p style="font-size:16px;color:var(--mt);line-height:1.75;margin-bottom:36px;">This plan is specific, time-bound and deliverable. ISP and Hotspot infrastructure is ready to deploy. CCTV build begins immediately. Let's talk.</p>
+        <div class="contact-lbl">Email</div>
+        <div class="contact-val">ian.duncan@figbloom.org</div>
+        <div class="contact-lbl">Website</div>
+        <div class="contact-val">figbloom.org</div>
+        <div class="contact-lbl">Office</div>
+        <div class="contact-val">SMK Business Center, Enterprise Road, Nairobi</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fi">
+    <img src="FIGBLOOM.png" style="height:24px;filter:brightness(0) invert(1) opacity(0.5);" alt="Figbloom">
+    <div class="fcopy">© 2026 Figbloom · Confidential · 90-Day Deliverables Plan · July – September 2026</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav = document.getElementById('topnav');
+  var hero = document.getElementById('hero');
+  function tick(){
+    var hb = hero.offsetTop + hero.offsetHeight;
+    if(window.scrollY < hb - 80){ nav.classList.add('dk'); }
+    else{ nav.classList.remove('dk'); }
+  }
+  window.addEventListener('scroll', tick, {passive:true});
+  tick();
+})();
+
+// ── HEATMAP ────────────────────────────────────────────────────────────
+(function(){
+  var T=[
+    // Core · Active (Month 1)
+    {n:'Kasarani',r:'core',s:'active',isp:4,nd:1},
+    {n:'Roysambu',r:'core',s:'active',isp:4,nd:1},
+    {n:'South C',r:'core',s:'active',isp:4,nd:1},
+    {n:'South B',r:'core',s:'active',isp:4,nd:0},
+    {n:'Githurai',r:'core',s:'active',isp:0,nd:1},
+    {n:'Eastleigh',r:'core',s:'active',isp:0,nd:1},
+    {n:'Ngong Road',r:'core',s:'active',isp:0,nd:1},
+    // Core · Building (Month 2)
+    {n:'Westlands',r:'core',s:'building',isp:7,nd:1},
+    {n:'Karen',r:'core',s:'building',isp:7,nd:0},
+    {n:'Langata',r:'core',s:'building',isp:7,nd:0},
+    {n:'Parklands',r:'core',s:'building',isp:7,nd:0},
+    {n:'Embakasi',r:'core',s:'building',isp:7,nd:0},
+    {n:'Pipeline',r:'core',s:'building',isp:0,nd:1},
+    {n:'Umoja',r:'core',s:'building',isp:0,nd:1},
+    {n:'Kayole',r:'core',s:'building',isp:0,nd:1},
+    // Satellite · Active (Month 1)
+    {n:'Ongata Rongai',r:'satellite',s:'active',isp:4,nd:1},
+    {n:'Kiambu Road',r:'satellite',s:'active',isp:0,nd:1},
+    // Satellite · Building (Month 2)
+    {n:'Kitengela',r:'satellite',s:'building',isp:0,nd:1},
+    {n:'Kahawa',r:'satellite',s:'building',isp:0,nd:1},
+    {n:'Ruiru',r:'satellite',s:'building',isp:0,nd:1},
+    {n:'Ruaka',r:'satellite',s:'building',isp:0,nd:1},
+    {n:'Kikuyu',r:'satellite',s:'building',isp:0,nd:1},
+    {n:'Syokimau',r:'satellite',s:'building',isp:0,nd:1},
+    {n:'Mlolongo',r:'satellite',s:'building',isp:0,nd:1},
+    // Outer · Building (Month 2)
+    {n:'Athi River',r:'outer',s:'building',isp:0,nd:1},
+    // Outer · Projected (Month 3)
+    {n:'Kiambu Town',r:'outer',s:'projected',isp:5,nd:1},
+    {n:'Thika',r:'outer',s:'projected',isp:5,nd:1},
+    {n:'Machakos',r:'outer',s:'projected',isp:5,nd:1},
+    {n:'Ngong',r:'outer',s:'projected',isp:5,nd:1},
+    {n:'Limuru',r:'outer',s:'projected',isp:0,nd:1},
+    {n:'Kajiado',r:'outer',s:'projected',isp:0,nd:1},
+    {n:'Kangundo',r:'outer',s:'projected',isp:0,nd:1},
+    {n:'Naivasha',r:'outer',s:'projected',isp:0,nd:1},
+    {n:'Ol Kalou',r:'outer',s:'projected',isp:0,nd:1},
+    {n:'Athi River Mkt',r:'outer',s:'projected',isp:0,nd:1},
+  ];
+  function rgLabel(r){return r==='core'?'Nairobi Core':r==='satellite'?'Satellite':'Outer County';}
+  function makeMix(t){
+    var mx=[];
+    if(t.isp>0) mx.push(t.isp+' ISP props');
+    if(t.nd>0) mx.push(t.nd+' hotspot node');
+    return mx.join(' · ');
+  }
+  var phases=[
+    {s:'active',label:'Active',mo:'Month 1 · July 2026',desc:'Contracts signed — generating revenue'},
+    {s:'building',label:'Building',mo:'Month 2 · August 2026',desc:'Infrastructure installing, billing live by month end'},
+    {s:'projected',label:'Projected',mo:'Month 3 · September 2026',desc:'Full 35-town network complete'}
+  ];
+  var container=document.getElementById('covPhaseGroups');
+  if(!container) return;
+  phases.forEach(function(p){
+    var towns=T.filter(function(t){return t.s===p.s;});
+    var grp=document.createElement('div');
+    grp.className='ph-group';
+    grp.dataset.phase=p.s;
+    var townsHtml=towns.map(function(t){
+      var mx=makeMix(t);
+      return '<div class="tc '+t.s+'">' +
+        '<div class="tc-name">'+t.n+'</div>' +
+        '<div class="tc-tag">'+rgLabel(t.r)+'</div>' +
+        (mx?'<div class="tc-mx">'+mx+'</div>':'') +
+        '</div>';
+    }).join('');
+    grp.innerHTML='<div class="ph-hd">' +
+      '<span class="ph-badge '+p.s+'">'+p.label+'</span>' +
+      '<span class="ph-mo">'+p.mo+'</span>' +
+      '<span class="ph-desc">'+p.desc+'</span>' +
+      '<span class="ph-count">'+towns.length+' towns</span>' +
+      '</div>' +
+      '<div class="ph-towns">'+townsHtml+'</div>';
+    container.appendChild(grp);
+  });
+  window.filterTowns=function(f,btn){
+    document.querySelectorAll('.cov-filter').forEach(function(b){b.classList.remove('on');});
+    btn.classList.add('on');
+    document.querySelectorAll('.ph-group').forEach(function(g){
+      g.style.display=(f==='all'||g.dataset.phase===f)?'':'none';
+    });
+  };
+})();
+</script>
+</body>
+</html>
